@@ -1,0 +1,36 @@
+services:
+  drupal:
+    image: drupal:9
+    ports:
+      - 80:80
+    volumes:
+      - drupal-modules:/var/www/html/modules
+      - drupal-profiles:/var/www/html/profiles
+      - drupal-sites:/var/www/html/sites
+      - drupal-themes:/var/www/html/themes
+
+volumes:
+  drupal-sites:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /mnt/efs-drupal/sites
+  drupal-modules:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /mnt/efs-drupal/modules
+  drupal-profiles:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /mnt/efs-drupal/profiles
+  drupal-themes:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /mnt/efs-drupal/themes
