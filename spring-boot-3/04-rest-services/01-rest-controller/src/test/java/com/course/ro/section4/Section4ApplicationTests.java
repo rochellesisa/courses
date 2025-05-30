@@ -1,10 +1,10 @@
-package com.course.ro.section3;
+package com.course.ro.section4;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Section3ApplicationTests {
+class Section4ApplicationTests {
 
 	@Test
 	void contextLoads() {

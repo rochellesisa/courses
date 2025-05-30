@@ -1,7 +1,6 @@
-package com.course.ro.section3.model.dao;
+package com.course.ro.section4.model.dao;
 
-import com.course.ro.section3.model.entity.Company;
-import org.springframework.transaction.annotation.Transactional;
+import com.course.ro.section4.model.entity.Company;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.course.ro.section3;
+package com.course.ro.section4;
 
-import com.course.ro.section3.model.dao.CompanyDAO;
-import com.course.ro.section3.model.entity.Company;
+import com.course.ro.section4.model.dao.CompanyDAO;
+import com.course.ro.section4.model.entity.Company;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootApplication
-public class Section3Application {
+public class Section4Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Section3Application.class, args);
+		SpringApplication.run(Section4Application.class, args);
 	}
 
 //	CREATE

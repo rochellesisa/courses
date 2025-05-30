@@ -1,4 +1,4 @@
-package com.course.ro.section3.model.entity;
+package com.course.ro.section4.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

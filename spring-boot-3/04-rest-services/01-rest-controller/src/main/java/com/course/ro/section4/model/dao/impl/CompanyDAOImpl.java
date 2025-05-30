@@ -1,7 +1,7 @@
-package com.course.ro.section3.model.dao.impl;
+package com.course.ro.section4.model.dao.impl;
 
-import com.course.ro.section3.model.dao.CompanyDAO;
-import com.course.ro.section3.model.entity.Company;
+import com.course.ro.section4.model.dao.CompanyDAO;
+import com.course.ro.section4.model.entity.Company;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
