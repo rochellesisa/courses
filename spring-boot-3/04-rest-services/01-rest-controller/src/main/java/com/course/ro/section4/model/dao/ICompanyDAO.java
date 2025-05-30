@@ -4,7 +4,7 @@ import com.course.ro.section4.model.entity.Company;
 
 import java.util.List;
 
-public interface CompanyDAO {
+public interface ICompanyDAO {
 
     void save(Company company);
     Company findById(Long id);

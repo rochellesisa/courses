@@ -1,6 +1,6 @@
 package com.course.ro.section4.model.dao.impl;
 
-import com.course.ro.section4.model.dao.CompanyDAO;
+import com.course.ro.section4.model.dao.ICompanyDAO;
 import com.course.ro.section4.model.entity.Company;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Repository
-public class CompanyDAOImpl implements CompanyDAO {
+public class CompanyDAOImpl implements ICompanyDAO {
 
     private EntityManager em;
 
@@ -43,13 +43,13 @@ public class CompanyDAOImpl implements CompanyDAO {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public Company update(Company company) {
         return em.merge(company);
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public int updateWebsite(Long id, String url) {
         return em.createQuery("UPDATE Company SET websiteUrl=:url WHERE id=:id")
                 .setParameter("url", url)
@@ -58,14 +58,14 @@ public class CompanyDAOImpl implements CompanyDAO {
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public void delete(Long id) {
         Company c = em.find(Company.class, id);
         em.remove(c);
     }
 
     @Override
-    @Transactional
+//    @Transactional
     public int deleteByName(String name) {
         return em.createQuery("DELETE FROM Company WHERE name=:name")
                 .setParameter("name", name)
