@@ -1,9 +1,4 @@
-package src.main;
-
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+package practice;
 
 public class _02_Add_Two_Numbers_v2 {
 

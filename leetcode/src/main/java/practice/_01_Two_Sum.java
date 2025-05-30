@@ -1,6 +1,4 @@
-package src.main;
-
-import java.util.stream.IntStream;
+package practice;
 
 public class _01_Two_Sum {
 
