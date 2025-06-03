@@ -1,16 +1,15 @@
-package com.course.ro.section4.model.repository;
+package com.course.ro.section5.model.repository;
 
-import com.course.ro.section4.model.entity.Company;
+import com.course.ro.section5.model.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.List;
 
 //@RepositoryRestResource(path = "companye")
-//@RepositoryRestResource(exported = false, path = "companye")
+@RepositoryRestResource(exported = false)
 public interface ICompanyRepository extends JpaRepository<Company, Long> {
 
 //    @Query("FROM Company o WHERE o.name=:name")

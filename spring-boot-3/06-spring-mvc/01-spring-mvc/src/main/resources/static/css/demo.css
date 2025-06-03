@@ -1,0 +1,9 @@
+.funny {
+    font-style: italic;
+    color:green;
+}
+
+.error {
+    color:red;
+    font-size:0.75em;
+}

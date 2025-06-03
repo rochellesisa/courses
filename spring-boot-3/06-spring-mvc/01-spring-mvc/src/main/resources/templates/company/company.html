@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Company</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        <div class="container" style="margin-top: 50px">
+            <h3>Company Directory</h3>
+            <hr>
+            <button type="button" class="btn btn-primary btn-sm" onclick="window.location='/view/company/create'">Create a Company</button>
+            <br>
+            <br>
+
+            <table class="table table-bordered table-striped" style="width: 100%">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="">Name</th>
+                        <th style="">Website</th>
+                        <th style="">Country</th>
+                        <th style="">Active</th>
+                        <th style="">Industry</th>
+                        <th style="">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="company : ${companies}">
+                        <td th:text="${company.name}"></td>
+                        <td th:text="${company.websiteUrl}"></td>
+                        <td th:text="${company.country}"></td>
+                        <td th:text="${company.isActive} ? 'Yes' : 'No'"></td>
+                        <td><ul><li th:each="ind : ${company.industryList}" th:text="${ind}"/></ul></td>
+                        <td>
+                            <a th:href="@{/view/company/update(companyId=${company.id})}" class="btn btn-primary btn-sm">Edit</a>
+                            <a th:href="@{/view/company/delete(companyId=${company.id})}" class="btn btn-danger btn-sm"
+                               th:attr="data-name=${company.name}"
+                               th:onclick="return confirm('Are you sure you want to delete ' + this.dataset.name + '?')">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+
+    </body>
+
+</html>

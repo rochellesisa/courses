@@ -1,12 +1,10 @@
 package practice;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class _04_Median_Sorted_ArraysTest {
+public class _04_Median_Sorted_Arrays_Test {
 
     private _04_Median_Sorted_Arrays solution = new _04_Median_Sorted_Arrays();
 

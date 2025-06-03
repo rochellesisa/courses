@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.course.ro</groupId>
-	<artifactId>section3</artifactId>
+	<artifactId>section5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>section3</name>
+	<name>section5</name>
 	<description>Demo project for Spring + Hibernate/JPA</description>
 	<url/>
 	<licenses>
@@ -60,6 +60,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 	</dependencies>
 
